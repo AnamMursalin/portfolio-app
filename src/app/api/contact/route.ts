@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       from: 'Portfolio Contact Form <onboarding@resend.dev>',
       to: ['anam985fatima@gmail.com'],
       subject: `New Message from ${sanitized.name}: ${sanitized.reason}`,
-      reply_to: sanitized.email,
+      replyTo: sanitized.email,
       text: `Name: ${sanitized.name}\nEmail: ${sanitized.email}\nReason: ${sanitized.reason}\n\nMessage:\n${sanitized.message}`,
     });
 
